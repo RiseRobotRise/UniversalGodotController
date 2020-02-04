@@ -1,0 +1,141 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://VirtualAnalog/Analog.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ui_assets/Steam/Steam_Left_Track.png" type="Texture" id=2]
+[ext_resource path="res://ui_assets/Xbox 360/360_Left_Stick.png" type="Texture" id=3]
+[ext_resource path="res://ui_assets/Xbox 360/360_Right_Stick.png" type="Texture" id=4]
+[ext_resource path="res://ui_assets/Xbox 360/360_Dpad.png" type="Texture" id=5]
+[ext_resource path="res://ui_assets/Xbox 360/360_A.png" type="Texture" id=6]
+[ext_resource path="res://ui_assets/Xbox 360/360_B.png" type="Texture" id=7]
+[ext_resource path="res://ui_assets/Xbox 360/360_X.png" type="Texture" id=8]
+[ext_resource path="res://ui_assets/Xbox 360/360_Y.png" type="Texture" id=9]
+[ext_resource path="res://ui_assets/Xbox 360/360_RB.png" type="Texture" id=10]
+[ext_resource path="res://ui_assets/Xbox 360/360_LB.png" type="Texture" id=11]
+[ext_resource path="res://ui_assets/Xbox 360/360_LT.png" type="Texture" id=12]
+[ext_resource path="res://ui_assets/Xbox 360/360_RT.png" type="Texture" id=13]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ViewportContainer" type="ViewportContainer" parent="VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 396.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 400.0
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="Left" type="Control" parent="VBoxContainer/HBoxContainer"]
+margin_right = 200.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Analog" parent="VBoxContainer/HBoxContainer/Left" instance=ExtResource( 1 )]
+position = Vector2( 100, 100 )
+
+[node name="Center" type="Control" parent="VBoxContainer/HBoxContainer"]
+margin_left = 204.0
+margin_right = 820.0
+margin_bottom = 200.0
+size_flags_horizontal = 3
+
+[node name="Right" type="Control" parent="VBoxContainer/HBoxContainer"]
+margin_left = 824.0
+margin_right = 1024.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Analog" parent="VBoxContainer/HBoxContainer/Right" instance=ExtResource( 1 )]
+position = Vector2( 100, 100 )
+
+[node name="Steam_Left_Track" type="TextureRect" parent="."]
+visible = false
+margin_left = 12.35
+margin_top = 422.2
+margin_right = 180.35
+margin_bottom = 590.2
+texture = ExtResource( 2 )
+expand = true
+
+[node name="360_Left_Stick" type="TouchScreenButton" parent="Steam_Left_Track"]
+visible = false
+position = Vector2( 34.6789, 32.7289 )
+normal = ExtResource( 3 )
+
+[node name="Steam_Left_Track2" type="TextureRect" parent="."]
+visible = false
+margin_left = 816.05
+margin_top = 421.25
+margin_right = 984.05
+margin_bottom = 589.25
+texture = ExtResource( 2 )
+expand = true
+
+[node name="360_Right_Stick" type="TouchScreenButton" parent="Steam_Left_Track2"]
+visible = false
+position = Vector2( 33.7949, 31.4974 )
+normal = ExtResource( 4 )
+
+[node name="360_Dpad" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 94.6, 228.405 )
+scale = Vector2( 1.5, 1.5 )
+normal = ExtResource( 5 )
+
+[node name="360_A" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 775.171, 359.529 )
+scale = Vector2( 0.8, 0.8 )
+normal = ExtResource( 6 )
+
+[node name="360_B" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 853.479, 275.555 )
+scale = Vector2( 0.8, 0.8 )
+normal = ExtResource( 7 )
+
+[node name="360_X" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 696.174, 276.155 )
+scale = Vector2( 0.8, 0.8 )
+normal = ExtResource( 8 )
+
+[node name="360_Y" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 773.582, 192.424 )
+scale = Vector2( 0.8, 0.8 )
+normal = ExtResource( 9 )
+
+[node name="360_RB" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 850.421, 97.8421 )
+normal = ExtResource( 10 )
+
+[node name="360_LB" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 87.2632, 84.7369 )
+normal = ExtResource( 11 )
+
+[node name="360_LT" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 92.8421, 0.631599 )
+normal = ExtResource( 12 )
+
+[node name="360_RT" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 849.684, 9.21049 )
+normal = ExtResource( 13 )
